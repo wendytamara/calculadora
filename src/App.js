@@ -6,24 +6,25 @@ class App extends Component {
   render() {
     return (
       <div class="container">
-<div class="row">
-
-
-  <div class="col-md-3"></div>
-
-<div id="Calculadora" class="col-md-6">
- <div class="panel panel-primary">
-<div class="panel-heading">Calculadora</div>
-<div class="panel-body">
-    <div class="col-md-12">
-      <div id="idCalculadora"></div>
-     </div>
-  </div>
- </div>
-</div>
-<div class="col-md-3"></div>
-</div>
-</div>
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div id="Calculadora" class="col-md-6">
+            <div class="panel panel-primary">
+              <div class="panel-heading">Calculadora</div>
+              <div class="panel-body">
+                <div className="col-md-12" style={{marginBottom: '10px'}}>
+                  <div id="idCalculadora">
+                    <div class="form-group">
+                      <input type="text" class="form-control" style={{height:'67px',fontSize:'44px',textAlign:'right',marginBottom:"20px",boxShadow:"inset 3px 3px rgba(0, 0, 0, 0.2)"}} />
+                    </div>
+                  </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+      </div>
     );
   }
 }
