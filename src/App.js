@@ -11,29 +11,33 @@ class App extends Component {
 
     
     const btn = botones.map(function(Item ,i){
-      return  <div class="col-md-3" style={{marginBottom: '10px'}}> <input class="btn-lg btn-block btn btn-primary" value={Item} key={i} type="text"/> </div>
+      return  <div key={i} className="col-md-3" style={{marginBottom: '10px'}}> <input className="btn-lg btn-block btn btn-primary" value={Item} key={i} type="text"/> </div>
     })
  
 
     return (
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3"></div>
-          <div id="Calculadora" class="col-md-6">
-            <div class="panel panel-primary">
-              <div class="panel-heading">Calculadora</div>
-              <div class="panel-body">
+      <div className="container">
+        <div className="row">
+        <div className="panel-heading"></div>
+          <div className="col-md-3 panel-primary">
+          <div className="panel-heading">Historial</div>
+          <div className="panel-body" style={{height: '400px',border:'2px solid #337ab7'}}> </div>
+          </div>
+          <div id="Calculadora" className="col-md-6">
+            <div className="panel panel-primary">
+              <div className="panel-heading">Calculadora</div>
+              <div className="panel-body">
                 <div className="col-md-12" style={{marginBottom: '10px'}}>
                   <div id="idCalculadora">
-                    <div class="form-group">
-                      <input type="text" class="form-control" style={{height:'67px',fontSize:'44px',textAlign:'right',marginBottom:"20px",boxShadow:"inset 3px 3px rgba(0, 0, 0, 0.2)"}} />
-                      <div class="row">
+                    <div className="form-group">
+                      <input type="text" className="form-control" style={{height:'67px',fontSize:'44px',textAlign:'right',marginBottom:"20px",boxShadow:"inset 3px 3px rgba(0, 0, 0, 0.2)"}} />
+                      <div className="row">
                         <div>
                         
                         {btn}
 
                         </div>
-                        <input class="btn-lg btn-block btn btn-danger" value="Borrar"  type="button"/>
+                        <input className="btn-lg btn-block btn btn-danger" value="Borrar"  type="button"/>
 
                        </div>
                     </div>
@@ -41,8 +45,9 @@ class App extends Component {
               </div>
             </div>
             </div>
+            
           </div>
-          <div class="col-md-3"></div>
+          <div className="col-md-3"></div>
         </div>
       </div>
     );
