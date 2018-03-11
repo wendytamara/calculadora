@@ -1,22 +1,17 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './App.css';
-
-// const botones = ["7","8","9","+","4","5","6","-",
-// "3","2","1","*","0",".","=","/"];
 
 
 class App extends Component {
 
-  
   render() {
 
     const botones = ["7","8","9","+","4","5","6","-",
     "3","2","1","*","0",".","=","/"];
 
     
-    const youyou = botones.map(function(hobbiItem ,i){
-      return <li key={i} >{hobbiItem}</li>
+    const btn = botones.map(function(Item ,i){
+      return  <div class="col-md-3" style={{marginBoton: '10 px'}}> <input class="btn-lg btn-block btn btn-primary" value={Item} key={i} type="text"/> </div>
     })
  
 
@@ -35,7 +30,7 @@ class App extends Component {
                       <div class="row">
                         <div>
                         
-                        {youyou}
+                        {btn}
 
                         </div>
                        </div>
