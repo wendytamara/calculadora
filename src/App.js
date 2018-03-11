@@ -11,7 +11,7 @@ class App extends Component {
 
     
     const btn = botones.map(function(Item ,i){
-      return  <div class="col-md-3" style={{marginBoton: '10 px'}}> <input class="btn-lg btn-block btn btn-primary" value={Item} key={i} type="text"/> </div>
+      return  <div class="col-md-3" style={{marginBottom: '10px'}}> <input class="btn-lg btn-block btn btn-primary" value={Item} key={i} type="text"/> </div>
     })
  
 
@@ -33,6 +33,8 @@ class App extends Component {
                         {btn}
 
                         </div>
+                        <input class="btn-lg btn-block btn btn-danger" value="Borrar"  type="button"/>
+
                        </div>
                     </div>
                   </div>
