@@ -2,8 +2,24 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 
+// const botones = ["7","8","9","+","4","5","6","-",
+// "3","2","1","*","0",".","=","/"];
+
+
 class App extends Component {
+
+  
   render() {
+
+    const botones = ["7","8","9","+","4","5","6","-",
+    "3","2","1","*","0",".","=","/"];
+
+    
+    const youyou = botones.map(function(hobbiItem ,i){
+      return <li key={i} >{hobbiItem}</li>
+    })
+ 
+
     return (
       <div class="container">
         <div class="row">
@@ -16,6 +32,13 @@ class App extends Component {
                   <div id="idCalculadora">
                     <div class="form-group">
                       <input type="text" class="form-control" style={{height:'67px',fontSize:'44px',textAlign:'right',marginBottom:"20px",boxShadow:"inset 3px 3px rgba(0, 0, 0, 0.2)"}} />
+                      <div class="row">
+                        <div>
+                        
+                        {youyou}
+
+                        </div>
+                       </div>
                     </div>
                   </div>
               </div>
