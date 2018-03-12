@@ -2,14 +2,23 @@ import React, { Component } from 'react';
 import './App.css';
 
 
+const state = {
+  valorActual:'3020',
+  historial: [
+   '3215',
+    '+5',
+   '-200'
+ ],
+ operacion: null
+ }
+
+
+
 class App extends Component {
-
   render() {
-
     const botones = ["7","8","9","+","4","5","6","-",
     "3","2","1","*","0",".","=","/"];
-
-    
+   
     const btn = botones.map(function(Item ,i){
       return  <div key={i} className="col-md-3" style={{marginBottom: '10px'}}> <input className="btn-lg btn-block btn btn-primary" value={Item} key={i} type="text"/> </div>
     })
@@ -55,23 +64,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-
-
-
-// class App extends Component {
-//   render() {
-//     return (
-//       <div className="App">
-//         <header className="App-header">
-//           <img src={logo} className="App-logo" alt="logo" />
-//           <h1 className="App-title">Welcome to React</h1>
-//         </header>
-//         <p className="App-intro">
-//           To get started, edit <code>src/App.js</code> and save to reload.
-//         </p>
-//       </div>
-//     );
-//   }
-// }
